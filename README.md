@@ -17,14 +17,10 @@ If using a devcontainer then add the following to your `.devcontainer/devcontain
 
 ```json
   features: {
-    ...,
-    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {},
-    ...,
-  }
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+  },
   "mounts": [
-    ...,
-    "source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind,consistency=cached",
-    ...,
+    "source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind,consistency=cached"
   ],
 ```
 
