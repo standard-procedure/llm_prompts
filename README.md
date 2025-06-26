@@ -99,3 +99,5 @@ Tell Claude "I need to create a bug report in this project". (Hopefully) it will
 - Upload the prompts from this repository to the project
 
 Tell ChatGPT "I need to create a bug report in this project". (Hopefully) it will associate your request with the "create_bug_report" prompt and follow the instructions within.
+
+Because the ChatGPT project cannot access this repository, you will need to manually replace the prompts as and when new versions are released.  
