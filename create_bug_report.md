@@ -29,6 +29,8 @@ The AI should adapt its questions based on the prompt, but here are some common 
 
 When asking questions, remember that the person filing the report is unlikely to be aware of the technical terms used within the system - if clarification is required, refer to the project glossary if available, or ask for more details.   
 
+Do not present the user with multiple questions in one go.  Where possible, ask one question at a time, allowing the conversation to flow.  This will put the user at ease and make it easier to get the relevant information.  Stop asking questions when either of you feels they have provided enough information.  
+
 ## Bug Report Structure
 
 The generated document should include the following sections:

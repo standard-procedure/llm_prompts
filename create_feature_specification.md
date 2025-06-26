@@ -28,7 +28,9 @@ The AI should adapt its questions based on the prompt, but here are some common 
 *   **Edge Cases:** "Are there any potential edge cases or error conditions we should consider?"
 *   **Team:** If Linear is available, the list of teams available to work on this Feature Specification can be taken from there.  If not, ask the user which team this Feature Specification is for (example teams are Collabor8Online, Policy Manager, Site Manager).
 
-When asking questions, remember that the person requesting the feature is unlikely to be aware of the technical terms used within the system - if clarification is required, refer to the project glossary if available, or ask for more details.   
+When asking questions, remember that the person requesting the feature may not be aware of the technical terms used within the system - if clarification is required, refer to the project glossary if available, or ask for more details.   
+
+Do not present the user with multiple questions in one go.  Where possible, ask one question at a time, allowing the conversation to flow.  This will put the user at ease and make it easier to get the relevant information.  Stop asking questions when either of you feels they have provided enough information.  
 
 ## Feature Specification Structure
 
