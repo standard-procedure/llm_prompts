@@ -16,7 +16,7 @@ They currently are designed to read and write Issues to and from [Linear](https:
 If using a devcontainer then add the following to your `.devcontainer/devcontainer.json`
 
 ```json
-  features: {
+  "features": {
     "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
   },
   "mounts": [
