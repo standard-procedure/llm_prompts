@@ -39,7 +39,7 @@ The generated issues _must_ follow this structure:
       - Sub Task 3 
       - Sub Task 4 
 
-Because the original Feature Specification is broken down into a three-level hierarchy of issues, this ensures that all related work is easily tracked within Linear.  
+Because the original Feature Specification is broken down into two tiers of issues, this ensures that all related work is easily tracked within Linear.  
     
 ## Target Audience
 
