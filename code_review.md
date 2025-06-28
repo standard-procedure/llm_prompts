@@ -60,6 +60,8 @@ Compare the changed files to the style guide and if there are simple changes to 
 
 If there is a project glossary, do any new terms introduced by these changes fit into the previous vocabulary?  Has the glossary been updated to match the new functionality?  If not, make the changes if they are small, or stop and ask, if they are larger.  
 
+Are the project README and any relevant documentation in the `docs` folder accurate and up to date?
+
 ## Output 
 
 After the various evaluations, the AI should give us an answer that says that changes in this feature branch: 
