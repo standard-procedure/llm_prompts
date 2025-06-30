@@ -28,9 +28,24 @@ The AI should adapt its questions based on the prompt, but here are some common 
 *   **Edge Cases:** "Are there any potential edge cases or error conditions we should consider?"
 *   **Team:** If Linear is available, the list of teams available to work on this Feature Specification can be taken from there.  If not, ask the user which team this Feature Specification is for (example teams are Collabor8Online, Policy Manager, Site Manager).
 
-When asking questions, remember that the person requesting the feature may not be aware of the technical terms used within the system - if clarification is required, refer to the project glossary if available, or ask for more details.   
+When asking questions, remember that the person requesting the feature may not be aware of the technical terms used within the system - if clarification is required, refer to the project glossary, or ask for more details.   
 
 Do not present the user with multiple questions in one go.  Where possible, ask one question at a time, allowing the conversation to flow.  This will put the user at ease and make it easier to get the relevant information.  Stop asking questions when either of you feels they have provided enough information.  
+
+## User Stories
+
+Once you have an understanding of the feature, split the feature into Scenarios.  The most important scenario is the "happy path", where the feature completes successfully.  But there may be other important scenarios (such as selecting different options or if the account has certain features switched on or off), plus we will also need to consider error handling and what could go wrong.  
+
+An individual scenario may cross multiple user roles, so that should be reflected in how the scenario is written.  
+
+For example: 
+- Manager invites a user a group
+  - Manager sends the invitation 
+- User receives the invitation
+  - User opens the invitation page and enters their details
+  - User completes the registration process 
+  - User is now added to the group
+- Manager receives a notification that the user has registered
 
 ## Feature Specification Structure
 
@@ -38,10 +53,10 @@ The generated document should include the following sections:
 
 1.  **Introduction/Overview:** Briefly describe the feature and the problem it solves. State the goal.
 2.  **Goals:** List the specific, measurable objectives for this feature.
-3.  **User Stories:** Detail the user narratives describing feature usage and benefits.
+3.  **Scenarios:** Detail the various scenarios that this feature may follow.  Number these scenarios and place them in order of importance.  
 4.  **Functional Requirements:** List the specific functionalities the feature must have. Use clear, concise language (e.g., "The system must allow users to upload a profile picture."). Number these requirements.
 5.  **Non-Goals (Out of Scope):** Clearly state what this feature will *not* include to manage scope.
-6.  **Design Considerations (Optional):** Link to mockups, describe UI/UX requirements, or mention relevant components/styles if applicable.
+6.  **Design Considerations (Optional):** Links to mockups, describe UI/UX requirements, or mention relevant components/styles if applicable.
 7.  **Technical Considerations (Optional):** Mention any known technical constraints, dependencies, or suggestions (e.g., "Should integrate with the existing Auth module").
 8.  **Success Metrics:** How will the success of this feature be measured? (e.g., "Increase user engagement by 10%", "Reduce support tickets related to X").
 9.  **Open Questions:** List any remaining questions or areas needing further clarification.
@@ -52,13 +67,14 @@ Assume the primary reader of the Feature Specification is a **junior developer**
 
 ## Output
 
-Either
-*   **Format:** Markdown (`.md`)
-*   **Location:** Available for the user to download; place a copy in the project's `doc/tasks` folder if accessible
+*   **Format:** Markdown (`.txt`)
+*   **Location:** Available for the user to download; create a folder called `doc/tasks/[feature-name]` and place a copy in there
 *   **Filename:** `[feature-name].txt`
+
+If available, post this document at Linear as a new issue, assigned to the relevant Team and Project.  
 
 ## Final instructions
 
 1. Do NOT start implementing the specification
-2. Make sure to ask the user clarifying questions
+2. Make sure to ask the user clarifying questions, taking in to account their level of technical knowledge
 3. Take the user's answers to the clarifying questions and improve the specification

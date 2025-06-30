@@ -6,21 +6,22 @@ To guide an AI assistant in reviewing, assessing and improving the code submitte
 
 ## Process
 
-1. Read Issue ID $ARGUMENTS from Linear.  The Issue may be nested as part of a hierarchy of nested sub-issues, so if clarification is required, read the parent issues as well.  
-2. Fetch the latest version of the `develop` branch, then fetch and switch to the latest version of the feature branch.  
-3. Merge the `develop` branch into the feature branch, then lint and ensure that tests all pass.  
-4. Get a list of files that have changed, compared to the `develop` branch.  
-5. *Briefly* evaluate if there is any required functionality that has not been delivered - and for the work that has been delivered, is it covered by adequate tests.  
-6. Check to see that all endpoints have specs for authentication and authorisation - security is vitally important so we need automated tests to prove our system meets the basic requirements.  
-7. Evaluate the changed files with the project style-guide and glossary.
-8. Are these changes ready to be merged into the `develop` branch? 
+- Read Issue ID $ARGUMENTS from Linear.  The Issue may be nested as part of a hierarchy of nested sub-issues, so if clarification is required, read the parent issues as well.  
+- Fetch the latest version of the `develop` branch, then fetch and switch to the latest version of the feature branch.  
+- Merge the `develop` branch into the feature branch, then lint and ensure that tests all pass.  
+- Get a list of files that have changed, compared to the `develop` branch.  
+- *Briefly* evaluate if there is any required functionality that has not been delivered - and for the work that has been delivered, is it covered by adequate tests.  
+-  Check to see that all endpoints have specs for authentication and authorisation - security is vitally important so we need automated tests to prevent regressions.
+- Evaluate the changed files with the project style-guide, glossary and documentation.
+- Update the documentation.
+- Are these changes ready to be merged into the `develop` branch? 
    - ready to be merged, or 
    - ready to be merged following minor amendments, or 
    - should be returned to the original developer with feedback
 
-It is important to remember that it is OK to stop and ask for help.  The point of the review is to make things better for everyone working on the project, so consensus is good.  
+Remember that it is OK to stop and ask for help.  Reviews are to make things better for everyone, so asking for advice and achieving consensus are good behaviours.
 
-Also, there may be some changes which are better returned to the original developer to complete.  It helps them meet the high standards that we expect and teaches best practices.  Always bear in mind that we are often dealing with junior developers who may not have a full understanding of the implications of their coding choices, so, if feedback is required, it's always important to be kind and helpful, rather than harsh and judgemental.   
+There may be some changes which are better returned to the original developer to complete.  This teaches them best practices and helps them meet the high standards that we expect.  Bear in mind that we are often dealing with junior developers; if feedback is required, be kind and helpful, not harsh and judgemental.   
 
 ### Merging
 
@@ -36,7 +37,7 @@ Once the merge has been completed, the project should be linted using `standardr
 
 Make sure that the specs all pass, using `bundle exec rspec`.  
 
-If there are any failures, check if it looks like an easy fix.  If so, correct the code, commit and run the specs again.  However, if it looks like a complex fix, or it is not resolved in three or four iterations, stop and ask for help.  
+If there are any failures, check if it looks like an easy fix.  If so, correct the code, commit and run the specs again.  However, if it looks like a complex fix, or it is not resolved in one or two attempts, stop and ask for help.  
 
 ### Evaluations 
 
@@ -46,9 +47,9 @@ Do the code changes cover the requirements detailed in Issue $ARGUMENTS?  And ar
 
 #### Security 
 
-As security and privacy are of vital importance, are all web-accessible end-points protected by the relevant authentication and authorisation mechanisms?  
+Security and privacy are of vital importance; are all web-accessible end-points protected by the relevant authentication and authorisation mechanisms?  
 
-Are there automated tests to prove this is the case, now and into the future?  In some cases this may be as simple as "HTTP status 401 if not logged in, HTTP status 200 if logged in".  In other cases, it may result in different outcomes based upon the permissions assigned to the user.  
+Are there automated tests to prove this is the case and prevent regressions?  In some cases this may be as simple as "HTTP status 401 if not logged in, HTTP status 200 if logged in".  In other cases, it may result in different outcomes based upon the permissions assigned to the user.  
 
 You can also use `bin/brakeman` as a static security analysis tool - to highlight potential issues with the code.  
 
@@ -62,9 +63,19 @@ If there is a project glossary, do any new terms introduced by these changes fit
 
 Are the project README and any relevant documentation in the `docs` folder accurate and up to date?
 
+Does the documentation match the new feature?  The documentation should represent how the system currently works, not how it was specified, so if there have been deviations, ensure the documentation is up to date.  
+
+### Documentation 
+
+This step only applies to Feature Specifications.  
+
+If there is an original Feature Specification in either `docs/tasks` or in Linear, that describes the work done here, evaluate it and see if the work that has been done matches the requirements.  It may be that, during implementation, we have had to adjust the requirements, so there may be differences.  
+
+Then copy the original specification or report to `docs/features`, updating the contents to reflect that actual work done.  The aim is that `docs/features` becomes a live documentation repository detailing how the system actually works.  
+
 ## Output 
 
-After the various evaluations, the AI should give us an answer that says that changes in this feature branch: 
+After the various evaluations, the AI state that the changes in this feature branch: 
 
 * meet the functional and general requirements from the issue and can be merged to `develop`, or 
 * were not quite up to standard, but some simple fixes were committed and now the branch can be merged, or 
@@ -76,4 +87,4 @@ If the Github PR can be derived from the Issue ID $ARGUMENTS, then the Github Pu
 
 1. Treat security very seriously 
 2. Project style is subjective but keeping everyone on the same page aids productivity so is also important
-3. Feedback should be understanding and provided with the aim of helping everyone improve.  
+3. Return the task to the original developer if a large number alterations are required - as this assists with bringing everyone on the team to the same standards.  Feedback should be understanding and aim to help everyone improve.  
