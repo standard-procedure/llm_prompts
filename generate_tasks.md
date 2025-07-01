@@ -19,6 +19,15 @@ The tasks generated will be created and stored as Markdown files within the `doc
 9.  **Optionally schedule the tasks in Linear:** Ask the user if they would like to schedule the issues, either in the current cycle or the next one - and if so, update the issues accordingly.  Only schedule the detailed tasks, do not schedule Issue $ARGUMENTS or its parent Feature Specification.  
 8.  **Generate a Summary:** Present a summary of the task list.  
 
+## Sub Tasks
+
+When deciding on sub-tasks:
+- Include detailed descriptions of any database migrations including fields, data types, foreign keys and indices.
+- Provide outlines of ruby models without writing the actual code - list the associations, enums, validations and normalisations required plus important methods
+- Provide full model specs
+- Provide the routes required but do not write the controllers
+- Provide full request specs, ensuring authentication and authorisation are fully tested
+
 ## Output Format
 
 Each task file should contain notes to assist the developer complete the task.  
