@@ -80,6 +80,8 @@ If there is a project glossary, do any new terms introduced by these changes fit
 
 ### Documentation 
 
+#### User Documentation 
+
 Do the project documentation and project README match the new feature?  
 
 For each user role involved in this specification, is there documentation, in `docs/features/$user_role` explaining how to make use of the feature?  
@@ -87,6 +89,12 @@ For each user role involved in this specification, is there documentation, in `d
 If changes are required, present a report to the manager and ask if it is OK to update the documentation.  
 
 Remember the documentation should reflect how it _actually_ works, not what was originally specified - and the ultimate aim is that the `docs/features` repository becomes a useful knowledge base on how to make best use of the system.  
+
+#### API documentation
+
+Have there been any changes to the JSON API?  
+
+If so, regenerate the OpenAPI specification by running `OPEN_API=1 bin/rails spec:requests`.  This will regenerate the OpenAPI specification in `public/api-docs` - and commit the changes.  
 
 #### Database Seeds
 
