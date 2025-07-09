@@ -10,11 +10,12 @@ The tasks generated will be created and stored as a hierarchy of sub-issues with
 
 ## Process
 
-1.  **Receive Feature Specification Reference:** The user points the AI to a specific Linear Issue (identified as $ARGUMENTS) containing the Feature Specification.
-2.  **Analyze Feature Specification:** The AI reads and analyzes the functional requirements, user stories, and other sections of the Feature Specification.
-3.  **Understand the Project Documentation:** The AI should read the project style guide and glossary to ensure the code structures and names it suggests fit with the overall pattern of the project.  
-4.  **Phase 1: Generate an Outline:** Use the process detailed in [generate_plan.md](generate_plan_.md) to design and record the plan for completion.  
-5.  **Phase 2: Generate Detailed Tasks:** For each step within the plan, use the process detailed in [generate_tasks.md](generate_tasks.md) to design and record the detailed tasks that will work towards implementing the feature.  
+-  **Receive Feature Specification Reference:** The user points the AI to a specific Linear Issue (identified as $ARGUMENTS) containing the Feature Specification.
+-  **Analyze Feature Specification:** The AI reads and analyzes the functional requirements, user stories, and other sections of the Feature Specification.
+-  **Understand the Project Documentation:** The AI should read the project style guide and glossary to ensure the code structures and names it suggests fit with the overall pattern of the project.  
+-  **Phase 1: Generate an Outline:** Use the process detailed in [generate_plan.md](generate_plan_.md) to design and record the plan for completion.  
+-  **Phase 2: Generate Detailed Tasks:** For each step within the plan, use the process detailed in [generate_tasks.md](generate_tasks.md) to design and record the detailed tasks that will work towards implementing the feature.  
+-  **Present a summary report**
 
 ## Output Format
 
@@ -77,7 +78,14 @@ In Linear (if available):
 			Notes - to aid the developer whilst they are completing the task
 
 Because the original Feature Specification is broken down into a two-level hierarchy of issues, this ensures that all related work is easily tracked.
-    
+
+### Summary Format
+
+The summary should contain the following:
+- Important: Will database migrations be required?
+- Important: Will routes need to be added or updated?
+- Then present a short summary of any other changes required
+   
 ## Target Audience
 
 Assume the primary reader of the task list is a **junior developer** who will implement the feature.

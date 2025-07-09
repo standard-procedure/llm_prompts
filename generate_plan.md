@@ -18,7 +18,6 @@ The tasks generated will be created and stored as comments within the original F
 6.  **Phase 2: Generate Outline Tasks:** Once the user confirms, repeat the following steps for each step within the plan: 
     2. **Outline Relevant Files and Acceptance Criteria:** Based on the Feature Specification, identify the models, controllers, tests and specs that will be necessary.  The models and controllers will implement the feature while the specs will prove that we have met the acceptance criteria for the Feature Specification.  The spec and test files should be at the appropriate levels of abstraction - a small number of full-stack (slow) tests to verify the integration of the most important user paths, with many (smaller and faster) low-level tests for the individual units that make up the feature.  
     3.  **Generate the Plan Output:** Write the plan to the `docs/tasks/[feature-name]` folder as a series of individual, numbered, markdown files.  These should contain the scenario, relevant files and acceptance criteria for that step.  Then, if available, add each step as a comment to the Feature Specification Issue $ARGUMENTS.
-8.  **Generate a Summary:** Present a summary of the outlines.  
 
 ## Output Format
 
