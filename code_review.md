@@ -10,7 +10,7 @@ Run through each step in turn, making notes as needed.
 
 - Read the original specification for the work - this may be stored in Linear as "Issue $ARGUMENTS" or in the `docs/tasks` folder as `$ARGUMENTS.md` (ask for clarification if needed).  The task details may be nested as part of a hierarchy of issues, so read the parent issues as well.  
 - Fetch the latest version of the `develop` branch, then fetch and switch to the latest version of the feature branch.  
-- Merge the `develop` branch into the feature branch, then lint and ensure that tests all pass.  
+- Merge the `develop` branch into the feature branch, then run database migrations, lint and ensure that tests all pass.  
 - Get a list of files that have changed, compared to the `develop` branch.  
 - *Briefly* evaluate if the code changes deliver all the required functionality and that the test coverage is adequate.  
 - Check all exposed endpoints to ensure they have automated authentication/authorisation tests.  
@@ -36,6 +36,7 @@ To ensure that the feature branch is up to date with trunk:
 - Merge it into the feature branch
 	- Fix simple merge conflicts immediately
 	- Ask the manager to resolve complex merge conflicts
+- Run any database migrations with `bin/rails db:migrate db:test:prepare`
 - Lint the merged code
 - Run the tests
   - If there are any failures, present a report and ask the manager how to proceed
