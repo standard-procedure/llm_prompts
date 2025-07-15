@@ -75,7 +75,7 @@ If any issues are found, plan a resolution, then present this plan to the manage
 
 #### Style 
 
-Compare the changed files to the style guide.  If the code deviates from the style guide, present a report to the manager and ask how to proceed.  
+Compare the changed files to the project style guide.  If the code deviates from the style guide, present a report to the manager and ask how to proceed.  
 
 If there is a project glossary, do any new terms introduced by these changes fit into the previous vocabulary?  Has the glossary been updated to match the new functionality?  If terms require adding or updating, present a report to the manager and ask if it is OK to make those changes.  
 
