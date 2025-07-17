@@ -53,7 +53,7 @@ Present a report to the manager before proceeding.
 
 #### Security, Authentication and Authorisation 
 
-Run `bin/brakeman` to perform a static security analysis on the codebase.  
+Run `bin/brakeman -i config/brakeman.config` (or `bin/brakeman` if there is no config file) to perform a static security analysis on the codebase.  
 
 Does this feature require new permissions to control read and write access to entities within the system?  
 

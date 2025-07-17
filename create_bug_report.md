@@ -2,13 +2,13 @@
 
 ## Goal
 
-To guide an AI assistant in creating a detailed Bug Report in Markdown format, based on an initial user prompt. The Bug Report should be clear, actionable, and suitable for a junior developer to understand and implement the feature.
+To create a detailed Bug Report in Markdown format, based on an initial user prompt. The Bug Report should be clear, actionable, and suitable for a junior developer to understand and implement the feature.
 
 ## Process
 
 1.  **Receive Initial Prompt:** The user provides a brief description or request for a new feature or functionality.
-2.  **Ask Clarifying Questions:** Before writing the Bug Report, the AI *must* ask clarifying questions to gather sufficient detail, including who has reported this bug, the conditions under which it occurred and which team will be responsible. The goal is to understand how the end-user's expectations were not met and the factors that may have caused this.  
-3.  **Generate Bug Report1:** Based on the initial prompt and the user's answers to the clarifying questions, generate a Bug Report using the structure outlined below.
+2.  **Ask Clarifying Questions:** Before writing the Bug Report, the AI *must* ask clarifying questions to gather sufficient detail.
+3.  **Generate Bug Report:** Based on the initial prompt and the user's answers to the clarifying questions, generate a Bug Report using the structure outlined below.
 4.  **Save Bug Report:** Generate the Bug Report as a Markdown document (with .txt extension).  Allow the user to view and download the bug report, add it to `docs/tasks` and, if available, post this document to Linear so that it is available for the relevant Team to work on. 
 
 ## Clarifying Questions (Examples)
@@ -17,19 +17,16 @@ The AI should adapt its questions based on the prompt, but here are some common 
 
 *   **What Happened vs Expectations:** "What did the user see when the bug occurred?", "What did the user expect to happen?", "In the user's words, how did the system fail to achieve what they were trying to do"
 *   **User and Account Details:** "Which user was doing this?", "Which Account were they in?"
-*   **Configuration Settings:** "Which configuration settings apply to that account?", "Which preferences does the user have set?"
-*   **Security and Data Loss:** "Could this potentially be, or lead to, a data breach?", "Has this caused any data loss?"
+*   **Configuration Settings:** "Which configuration settings apply to that account?", "Which preferences had the user set?"
+*   **Security and Data Loss:** "Could this lead to a data breach?", "Has this caused any data loss?"
 *   **Urgency:** "What timescale are they expecting for a resolution?"
 *   **Importance:** "Is this issue preventing them from getting their work done?", "Do we, as the software provider, look bad because of this?"
 *   **Acceptance Criteria:** "How will we know when this bug is successfully fixed?", "What is the user expecting?"
 *   **Related Items:** "Is there anything in this area that it would be good to fix at the same time?"
 *   **Scope/Boundaries:** "Although they may be related, are there any other aspects of this bug that we *should not* look at fixing at this time?"
 *   **Mitigations and Workarounds:** "Are there any quick fixes that will keep the users happy while we work on the underlying problem?"
-*   **Team:** If Linear is available, the list of teams available to work on this Bug Report can be taken from there.  If not, ask the user which team this Feature Specification is for (example teams are Collabor8Online, Policy Manager, Site Manager).
 
-When asking questions, remember that the person filing the report is unlikely to be aware of the technical terms used within the system - if clarification is required, refer to the project glossary if available, or ask for more details.   
-
-Do not present the user with multiple questions in one go.  Ask one question at a time, allowing the conversation to flow.  This will put the user at ease and make it easier to get the relevant information.  Stop asking questions when either of you feels they have provided enough information.  
+Prepare a list of clarifying questions, then ask them one at a time, allowing a conversation to flow.  Remember that the person filing the report will not be aware of technical terms.  If clarification is required, ask for more details, referring to the project glossary if available.  
 
 ## Bug Report Structure
 
@@ -60,5 +57,5 @@ If possible, also create a new issue in Linear within the relevant Team and Proj
 ## Final instructions
 
 1. Do NOT start implementing a fix to the report
-2. Make sure to ask the user clarifying questions, taking into account the user's technical knowledge and the urgency of the sitation
-3. Use these answers to improve the report
+2. Make sure to ask the user clarifying questions
+3. Treat security and data protection as our highest priority
