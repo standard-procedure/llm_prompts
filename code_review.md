@@ -9,13 +9,14 @@ Guidelines for reviewing, assessing and improving the code submitted by another 
 Run through each step in turn, making notes as needed.  
 
 - Read the original specification for the work - this may be stored in Linear as "Issue $ARGUMENTS" or in the `docs/tasks` folder as `$ARGUMENTS.md` (ask for clarification if needed).  The task details may be nested as part of a hierarchy of issues, so read the parent issues as well.  
+- Read the project [style-guide](/docs/style-guide.md) to understand any conventions used within the project
 - Fetch the latest version of the `develop` branch, then fetch and switch to the latest version of the feature branch.  
 - Merge the `develop` branch into the feature branch, then run database migrations, lint and ensure that tests all pass.  
-- Get a list of files that have changed, compared to the `develop` branch.  
+- Compare the `develop` branch to the feature branch and get a list of files that have changed.
 - *Briefly* evaluate if the code changes deliver all the required functionality and that the test coverage is adequate.  
 - Check all exposed endpoints to ensure they have automated authentication/authorisation tests.  
 - Evaluate the changed files against the project style-guide, glossary and documentation.
-- Update the project documentation.
+- Update the project documentation if it does not include details of this feature.
 - Make your final evaluation
   - ready to be merged 
   - ready to be merged following a user-interface review 
@@ -26,6 +27,8 @@ If you find any minor issues (such as formatting, code style or missing authoris
 ### Read the Specification
 
 Read and understand the original specification for the work so that the code can be evaluated for functional completeness.  Make temporary notes if required.  
+
+Read the project style guide to ensure all conventions used within the project are understood.  
 
 ### Merging
 
@@ -109,11 +112,11 @@ If either of these are required, think hard about the new seeds that will be req
 
 After the various evaluations, the final output should be an evaluation of the work done: 
 
-- this work is ready to be merged
-- this work includes user-interface changes so requires a visual inspection before merging
-- this work has one or more issues and should be returned to the original developer with feedback
+- ready to be merged
+- ready to be merged following a user-interface review
+- should be returned to the developer with the following feedback
 
-If the Github PR can be derived from the Issue ID $ARGUMENTS, then add the evaluation as a comment on the Github Pull Request, as well as presenting the output to the manager.
+If the task is taken from Linear, post this report as a comment on the original Issue ($ARGUMENTS). 
 
 ## Final Instructions 
 
