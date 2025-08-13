@@ -12,7 +12,7 @@ We want to ship the feature as quickly as possible (so that we can get feedback 
 - Understand the Project: Read the project glossary and other documentation in order to understand the system.
 - Ask Clarifying Questions: Ask clarifying questions in order to ensure that the essential scenarios are fully understood. The goal is to understand the "what" and "why" of the feature, not necessarily the "how".  
 - Generate Feature Specification: Generate a Feature Specification based upon those answers.
-- Save Feature Specification: Save the feature specification in `docs/features` or in Linear, as appropriate.  
+- Save Feature Specification: Save the feature specification in `spec/system` or in Linear, as appropriate.  
 
 ## Example Clarifying Questions
 
@@ -72,7 +72,6 @@ The generated document should be in [Gherkin](https://cucumber.io/docs/gherkin/r
   - Given 
   - When 
   - Then 
-- Open questions
 
 ### Title
 
@@ -110,7 +109,7 @@ Feature: Manager invites people to a group
 - Format 
   Gherkin `.feature`
 - Location
-	If available: `docs/feature` folder 
+	If available: `spec/system` folder 
   If available: create an issue in the correct Team and Project using the Linear MCP server	
 - Filename
   `[feature-name].feature`
