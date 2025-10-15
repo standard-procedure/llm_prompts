@@ -10,8 +10,6 @@ Run through each step in turn, making notes as needed.
 
 - Read the original specification for the work - this may be stored in Linear as "Issue $ARGUMENTS" or in the `docs/tasks` folder as `$ARGUMENTS.md` (ask for clarification if needed).  The task details may be nested as part of a hierarchy of issues, so read the parent issues as well.  
 - Read the project [style-guide](/docs/style-guide.md) to understand any conventions used within the project
-- Fetch the latest version of the `develop` branch, then fetch and switch to the latest version of the feature branch.  
-- Merge the `develop` branch into the feature branch, then run database migrations, lint and ensure that tests all pass.  
 - Compare the `develop` branch to the feature branch and get a list of files that have changed.
 - *Briefly* evaluate if the code changes deliver all the required functionality and that the test coverage is adequate.  
 - Check all exposed endpoints to ensure they have automated authentication/authorisation tests.  
@@ -30,23 +28,11 @@ Read and understand the original specification for the work so that the code can
 
 Read the project style guide to ensure all conventions used within the project are understood.  
 
-### Merging
-
-The "trunk" code for the project is in the `develop` branch (or `main` for smaller projects).  The work to be reviewed will be in a specific feature branch.  
-
-To ensure that the feature branch is up to date with trunk:
-- Fetch the latest trunk branch
-- Merge it into the feature branch
-	- Fix simple merge conflicts immediately
-	- Ask the manager to resolve complex merge conflicts
-- Run any database migrations with `bin/rails db:migrate db:test:prepare`
-- Lint the merged code
-- Run the tests
-  - If there are any failures, present a report and ask the manager how to proceed
-
 ### Evaluations 
 
 List the files that have changed between the feature branch and the project trunk.  
+
+Run migrations with `bin/rails db:migrate db:test:prepare`
 
 #### Functionality
 
